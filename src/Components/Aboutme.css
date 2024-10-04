@@ -1,0 +1,131 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Libre Baskerville", serif;
+    line-height: 1.7;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive container */
+main, .title {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding: 0 1rem; /* Add some padding for smaller screens */
+}
+
+/* Title styling */
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 0.5rem 0;
+    padding: 3.5rem 0 0;
+}
+
+/* Style for span inside the title */
+.title span {
+    color: hsl(200, 90, 90);
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Support for shape-outside */
+@supports (shape-outside: circle()) {
+    .title {
+        padding: 2.0rem 0 0;
+    }
+}
+
+/* Intro styling */
+.intro {
+    color: hsl(30, 50, 60);
+    font-style: italic;
+    font-size: 1.15rem;
+    text-shadow: 1px 1px 1px #333;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 0.9rem;
+    margin: 0;
+    padding-top: 1.5rem;
+}
+
+.first {
+    padding-top: 1.22rem;
+}
+
+/* Image styling */
+.img {
+    float: left; 
+    height: 600px;
+    width: 600px;
+    shape-outside: ellipse(224px 320px at 35.1% 50%);
+    clip-path: ellipse(224px 320px at 35.1% 50%);
+    margin: 1rem;
+}
+
+/* Container background image styles */
+.container {
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 2rem; /* Smaller font size for tablets */
+        padding: 2.5rem 0 0;
+    }
+    
+    .title span {
+        font-size: 1.75rem;
+    }
+
+    .img {
+        height: 400px; /* Reduce image size on smaller screens */
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.75rem; /* Smaller font size for mobile */
+        padding: 2rem 0 0;
+    }
+    
+    .title span {
+        font-size: 1.5rem;
+    }
+
+    .img {
+        height: 300px; /* Reduce image size further on mobile */
+        width: 300px;
+        shape-outside: none; /* Disable shape-outside on smaller screens */
+        float: none; /* Remove float for mobile view */
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+        padding: 1.5rem 0 0;
+    }
+
+    .title span {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.8rem; /* Smaller text for very small screens */
+    }
+}

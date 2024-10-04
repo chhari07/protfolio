@@ -1,0 +1,32 @@
+.logo {
+    width: 350px;
+    height: 50px;
+    background-image: url('../images/07600e10b9449c4e440796ba9a514e94.jpg'); /* Replace with your actual logo URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Flexbox container to center the logo */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .logo {
+        width: 350px;
+    height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 350px;
+        height: 50px;
+    }
+}
